@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    /* Add styles for the header image */
+    .header-img {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    .form-container {
+      background-color: #CCCCFF; /* Background color for the form box */
+      border: 1px solid #ccc; /* Border for the box */
+      border-radius: 8px; /* Rounded corners */
+      padding: 10px; /* Padding inside the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      width: 95%; /* Width of the box */
+      max-width: 600px; /* Maximum width of the box */
+    }
+    table {
+      width: 100%; /* Full width for the table */
+    }
+    .form-row {
+      background-color: #f0f8ff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      color: black; /* Change label color to black */
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"], textarea, select {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 94%;
+      border-radius: 5px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    input[type="radio"] + label, input[type="checkbox"] + label {
+      color: black; /* Change checkbox label color to black */
+    }
+    .register-button {
+      background-color: #0F52BA; /* Button background color */
+      color: white; /* White text */
+      border: none; /* No border */
+      padding: 10px 20px; /* Padding */
+      text-align: center; /* Center text */
+      text-decoration: none; /* No underline */
+      display: inline-block; /* Inline-block */
+      font-size: 16px; /* Font size */
+      margin: 4px 2px; /* Margin */
+      cursor: pointer; /* Pointer cursor */
+      border-radius: 5px; /* Rounded corners */
+    }
+    /* Hide spinner controls in number input */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Image -->
+  <img src="https://auburndale.cnusd.k12.ca.us/UserFiles/Servers/Server_212309/Image/Academics/Student%20Registration.jpg" alt="Student Registration" class="header-img">
+
+  <div class="form-container">
+    <form>
+      <table>
+        <tr class="form-row">
+          <td><label for="name">Name</label></td>
+          <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="contact">Contact Number</label></td>
+          <td><input type="number" id="contact" name="contact" required></td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="gender">Gender</label></td>
+          <td>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+          </td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="address">Address</label></td>
+          <td><textarea id="address" name="address" rows="4" cols="50" required></textarea></td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="hobbies">Hobbies</label></td>
+          <td>
+            <input type="checkbox" id="Travelling" name="hobbies" value="Travelling">
+            <label for="Travelling">Travelling</label><br>
+            <input type="checkbox" id="Singing" name="hobbies" value="Singing">
+            <label for="Singing">Singing</label><br>
+            <input type="checkbox" id="Dancing" name="hobbies" value="Dancing">
+            <label for="Dancing">Dancing</label>
+          </td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="skills">Skills</label></td>
+          <td>
+            <input type="checkbox" id="c" name="skills" value="C">
+            <label for="c">C</label><br>
+            <input type="checkbox" id="python" name="skills" value="Python">
+            <label for="python">Python</label><br>
+            <input type="checkbox" id="java" name="skills" value="Java">
+            <label for="java">Java</label>
+          </td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="qualification">Higher Qualification</label></td>
+          <td>
+            <select id="qualification" name="qualification">
+              <option value="highschool">High School</option>
+              <option value="bachelor">Bachelor's Degree</option>
+              <option value="masters">Master's Degree</option>
+              <option value="doctorate">Doctorate</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="form-row">
+          <td><label for="district">District</label></td>
+          <td>
+            <select id="district" name="district">
+              <option value="Rangareddy">Rangareddy</option>
+              <option value="Hyderabad">Siddipet</option>
+              <option value="Siddipet">Karimnagar</option>
+              <option value="Adilabad">Adilabad</option>
+              <option value="Karimnagar">Hyderabad</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="form-row">
+          <td colspan="2" style="text-align: center;">
+            <button type="submit" class="register-button">Register</button>
+          </td>
